@@ -1,2 +1,2 @@
 # pulsati-nodejs
-Curos sobre NodeJS
+Curso sobre NodeJS
