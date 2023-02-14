@@ -21,8 +21,9 @@ exports.lerArquivo = (nomeArquivo) => {
       if (erro) {
         reject(erro);
       } else {
-        resolve();
+        resolve(texto);
       }
     })
   });
+  return promessa;
 }
