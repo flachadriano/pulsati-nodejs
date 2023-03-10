@@ -3,6 +3,12 @@ import AppDataSource from "../config/Database";
 import { Usuario } from "../model/Usuario";
 
 export class UsuarioController {
+  async list(req: Request, res: Response) {
+    const repo = AppDataSource.getRepository(Usuario);
+    const usuarios = await repo.find();
+    res.json(usuarios);
+  }
+
   async create(req: Request, res: Response) {
     const { nome, sobrenome }: { 
       nome: string, sobrenome: string
